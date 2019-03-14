@@ -1,0 +1,18 @@
+{ "rules_alert_for_uid_1_login" : {
+    "LABEL" : "alert for UID 1 login",
+    "PLUGIN" : "reaction rule",
+    "OWNER" : "rules",
+    "TAGS" : [ "security" ],
+    "REQUIRES" : [ "rules" ],
+    "ON" : { "user_login" : [] },
+    "IF" : [ { "data_is" : { "data" : [ "account:uid" ], "value" : "1" } } ],
+    "DO" : [
+      { "mail_to_users_of_role" : {
+          "roles" : { "value" : { "3" : "3" } },
+          "subject" : "ALERT: UID1 logged into [site:name] at approx [site:current-date]",
+          "message" : "ALERT: UID1 logged into [site:name] at approx [site:current-date]"
+        }
+      }
+    ]
+  }
+}
