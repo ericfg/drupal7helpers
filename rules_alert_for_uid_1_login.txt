@@ -1,6 +1,9 @@
+
 { "rules_alert_for_uid_1_login" : {
+    "description" : "//you need to either update the roles value with the rid of the role to notify or edit the Action Element: Send mail to all users of a role and select the correct role there ",
     "LABEL" : "alert for UID 1 login",
     "PLUGIN" : "reaction rule",
+    "ACTIVE" : false,
     "OWNER" : "rules",
     "TAGS" : [ "security" ],
     "REQUIRES" : [ "rules" ],
